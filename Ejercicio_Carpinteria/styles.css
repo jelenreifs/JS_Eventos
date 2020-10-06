@@ -1,0 +1,31 @@
+body {
+  background-color: #f4f4f4;
+}
+
+.herramienta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+}
+
+#unidades {
+  background-color: orange;
+  border-radius: 50%;
+  padding: 0.2em 0.5em;
+  font-weight: bold;
+  margin-left: 1em;
+}
+
+.nombre-producto {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.nombre-producto::after {
+  content: ":";
+}
