@@ -1,82 +1,87 @@
-let martilloMiniatura;
-let ud = 0;
+let martilloMiniatura = "";
+let llaveMiniatura = "";
+let brochaMiniatura = "";
+let troncoMiniatura = "";
 
-/* function sumaUnidadBrocha() {
-  ud = ud + 1;
+let cantidadM = 0;
+let cantidadB = 0;
+let cantidadL = 0;
+let cantidadT = 0;
 
-  console.log(ud);
-  document.querySelector("#brocha #unidades").textContent = `${ud}`;
-  return ud;
-}
-sumaUnidadBrocha(); */
+function sumar(herramienta) {
+  switch (herramienta) {
+    case "martillo":
+      cantidadM++;
 
-/* function sumaUnidad() {
-  ud = ud + 1;
+      martilloMiniatura += `<img src="./images/logo.svg" alt="martillo" />`;
+      break;
+    case "brocha":
+      cantidadB++;
+      brochaMiniatura += `<img src="./images/brocha.svg" alt="brocha" />`;
+      break;
+    case "llave":
+      cantidadL++;
+      llaveMiniatura += `<img src="./images/llave.svg" alt="llave" />`;
+      break;
 
-  console.log(ud);
-  document.getElementById("unidades").textContent = `${ud}`;
-  return ud;
-}
-sumaUnidad(); */
-
-/* Comprar: hasta 10 artículos por producto */
-
-let cantidad = 0;
-function sumar() {
-  if (cantidad < 10) {
-    cantidad++;
-    document.querySelector("#martillo #unidades").textContent = cantidad;
-  } else {
-    alert("El límite es hasta 10 artículos por producto");
+    case "tronco":
+      cantidadT++;
+      troncoMiniatura += `<img src="./images/tronco.svg" alt="tronco" />`;
+      break;
   }
+
+  document.querySelector(
+    "#martillo #unidades"
+  ).innerHTML = `<p>${cantidadM}</p>`;
+  document.querySelector("#llave #unidades").innerHTML = `<p>${cantidadL}</p>`;
+  document.querySelector("#brocha #unidades").innerHTML = `<p>${cantidadB}</p>`;
+  document.querySelector("#tronco #unidades").innerHTML = `<p>${cantidadT}</p>`;
+
+  document.querySelector("#martillo #miniatura").innerHTML = martilloMiniatura;
+  document.querySelector("#llave #miniatura").innerHTML = llaveMiniatura;
+  document.querySelector("#brocha #miniatura").innerHTML = brochaMiniatura;
+  document.querySelector("#tronco #miniatura").innerHTML = troncoMiniatura;
 }
 sumar();
 
+function restar(herramienta) {
+  switch (herramienta) {
+    case "martillo":
+      cantidadM--;
+      martilloMiniatura = document.querySelector("#miniatura img");
+      for (element of martilloMiniatura) {
+        console.log(element);
+        element.remove();
+      }
 
+      break;
 
-function addImages(cantidad) {
-  for (let i = 0; (i = cantidad); i++) {
-    let miniatura = ` <img src="./images/martillo.svg" alt="martillo" />`;
-    total += miniatura[i];
-    document.getElementById("miniatura").innerHTML = total;
+    case "brocha":
+      cantidadB--;
+      /*  brochaMiniatura--; */
+      break;
+
+    case "llave":
+      cantidadL--;
+      llaveMiniatura--;
+      break;
+
+    case "tronco":
+      cantidadT--;
+      /*  troncoMiniatura--; */
+      break;
   }
+
+  document.querySelector(
+    "#martillo #unidades"
+  ).innerHTML = `<p>${cantidadM}</p>`;
+  document.querySelector("#llave #unidades").innerHTML = `<p>${cantidadL}</p>`;
+  document.querySelector("#brocha #unidades").innerHTML = `<p>${cantidadB}</p>`;
+  document.querySelector("#tronco #unidades").innerHTML = `<p>${cantidadT}</p>`;
+
+  document.querySelector("#martillo #miniatura").innerHTML = martilloMiniatura;
+  document.querySelector("#llave #miniatura").innerHTML = llaveMiniatura;
+  document.querySelector("#brocha #miniatura").innerHTML = brochaMiniatura;
+  document.querySelector("#tronco #miniatura").innerHTML = troncoMiniatura;
 }
-addImages();
-
-/* function sumaMiniatura() {
-  for (let i = 0; i > 4; i++) {
-    let miniatura = ` <img src="./images/martillo.svg" alt="martillo" />`;
-    totalMiniaturas += miniatura[i];
-    document.getElementById("miniatura").appendChild = totalMiniaturas;
-  }
-}
-
-sumaMiniatura(); */
-
-/* function sumaUnidadLlave() {
-  ud = ud + 1;
-
-  console.log(ud);
-  document.querySelector("#llave #unidades").textContent = `${ud}`;
-  return ud;
-}
-sumaUnidadLlave();
-
-function sumaUnidadMartillo() {
-  ud = ud + 1;
-
-  console.log(ud);
-  document.querySelector("#martillo #unidades").textContent = `${ud}`;
-  return ud;
-}
-sumaUnidadMartillo();
-
-function sumaUnidadTronco() {
-  ud = ud + 1;
-
-  console.log(ud);
-  document.querySelector("#tronco #unidades").textContent = `${ud}`;
-  return ud;
-}
-sumaUnidadTronco();
- */
+restar();

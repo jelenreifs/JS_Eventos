@@ -10,58 +10,77 @@
 </head>
 
 <body>
-    <div id="container">
-        <div id="martillo" class="herramienta">
-            <div class="info">
-                <h4 class="nombre-producto">Martillo</h4>
-                <p id="unidades"></p>
-                <div id="miniatura"></div>
+    <div class="container">
+        <div class="encabezado">
+            <h1>CARPINTERÍA MAZARREDO</h1>
+            <div id="cesta">Cesta</div>
+        </div>
+
+        <div class="productos">
+            <div id="martillo" class="herramienta">
+                <div class="info">
+                    <h4 id="titulo" class="nombre-producto">Martillo</h4>
+                    <div id="info-producto"></div>
+
+                    <div id="unidades"></div>
+                    <div id="miniatura"></div>
+                </div>
+
+                <div class="operaciones">
+                    <button onclick="sumar('martillo')">Añadir</button>
+                    <button onclick="restar('martillo')">Restar</button>
+                </div>
             </div>
 
-            <div class="operaciones">
-                <button onclick="sumar()">Añadir</button>
-                <button>Restar</button>
+            <div id="llave" class="herramienta">
+                <div class="info">
+                    <h4 id="titulo" class="nombre-producto">Llave</h4>
+                    <div id="info-producto"></div>
+
+                    <div id="unidades"></div>
+                    <div id="miniatura"></div>
+                </div>
+
+                <div class="operaciones">
+                    <button onclick="sumar('llave')">Añadir</button>
+                    <button onclick="restar('llave')">Restar</button>
+                </div>
+            </div>
+
+            <div id="brocha" class="herramienta">
+                <div class="info">
+                    <h4 id="titulo" class="nombre-producto">Brocha</h4>
+                    <div id="info-producto"></div>
+
+                    <div id="unidades"></div>
+                    <div id="miniatura"></div>
+                </div>
+
+                <div class="operaciones">
+                    <button onclick="sumar('brocha')">Añadir</button>
+                    <button onclick="restar('brocha')">Restar</button>
+                </div>
+            </div>
+
+            <div id="tronco" class="herramienta">
+                <div class="info">
+                    <h4 id="titulo" class="nombre-producto">Tronco</h4>
+                    <div id="info-producto"></div>
+
+                    <div id="unidades"></div>
+                    <div id="miniatura"></div>
+                </div>
+
+                <div class="operaciones">
+                    <button onclick="sumar('tronco')">Añadir</button>
+                    <button onclick="restar('tronco')">Restar</button>
+                </div>
             </div>
         </div>
 
 
-        <!--                   <div id="martillo" class="herramienta">
-                        <h4 class="nombre-producto">Martillo</h4>
-                        <p id="unidades"></p>
-                        <div class="miniatura"></div>
-                        <div class="operaciones">
-                            <button onclick="sumaUnidadMartillo()">Añadir</button>
-                            <button>Restar</button>
-                        </div>
-                    </div> -->
-        <!--        <div id="brocha" class="herramienta">
-            <h4 class="nombre-producto">Brocha</h4>
-            <p id="unidades"></p>
-            <div id="miniatura"></div>
-            <div class="operaciones">
-                <button onclick="sumar()">Añadir</button>
-                <button>Restar</button>
-            </div>
-        </div> -->
-        <!--  <div id="llave" class="herramienta">
-            <h4 class="nombre-producto">Llave</h4>
-            <p class="unidades"></p>
-            <div id="miniatura"></div>
-            <div class="operaciones">
-                <button onclick="sumaUnidadLlave()">Añadir</button>
-                <button>Restar</button>
-            </div>
-        </div>
-   
-        <div id="tronco" class="herramienta">
-            <h4 class="nombre-producto">Tronco</h4>
-            <p id="unidades"></p>
-            <div id="miniatura"></div>
-            <div class="operaciones">
-                <button onclick="sumaUnidadTronco()">Añadir</button>
-                <button>Restar</button>
-            </div>
-        </div> -->
+
+
 
     </div>
 

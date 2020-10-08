@@ -377,3 +377,11 @@ function buscarPersonas() {
     ).innerHTML = mostrarPersonas;
   }
 }
+
+function comprobarTexto() {
+  comprobarTextos = " ";
+  let texto = document.getElementById("numero").value;
+  for (valor = 1; i < arrayPersonas.length; valor++) {
+    personas[i].includes(texto);
+  }
+}

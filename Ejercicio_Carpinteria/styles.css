@@ -1,5 +1,31 @@
 body {
-  background-color: #f4f4f4;
+  background-color: #f1f1f1;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.encabezado {
+  display: flex;
+  align-items: center;
+}
+
+.encabezado  #cesta {
+  position: absolute;
+  right: 5%;
+}
+
+.productos {
+  width: 90%;
+  background-color: #fff;
+  padding: 1em;
+}
+
+.productos > div {
+  margin-bottom: 2em;
 }
 
 .herramienta {
@@ -10,7 +36,18 @@ body {
 
 .info {
   display: flex;
+  flex-direction: row;
   align-items: center;
+}
+
+.info p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.info img {
+  width: 24px;
+  margin: 0 4px;
 }
 
 #unidades {
